@@ -7,6 +7,16 @@ redirect_from:
   - /wordpress/blog-posts/
 ---
 
+
+<script>
+  // Simple client-side password check
+  var password = prompt("Password?");
+  if (password !== "yes") {
+    document.body.innerHTML = "<h1>Access Denied</h1>";
+    throw new Error("Access denied"); // Stop further rendering
+  }
+</script>
+
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
 {% for post in site.posts %}
