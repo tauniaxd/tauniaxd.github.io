@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <title>Login</title>
+</head>
+<body>
+  <h2>Enter Password</h2>
+  <input type="password" id="password" />
+  <button onclick="checkPassword()">Submit</button>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+
+      // Map passwords to pages
+      const pages = {
+        "archive": "year-archive.html"
+      };
+
+      if (pages[input]) {
+        window.location.href = pages[input];
+      } else {
+        alert("Incorrect password");
+      }
+    }
+  </script>
+</body>
+</html>
